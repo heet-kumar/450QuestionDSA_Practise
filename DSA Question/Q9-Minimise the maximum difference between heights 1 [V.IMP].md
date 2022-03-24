@@ -1,4 +1,4 @@
-# Minimise the maximum difference between heights [V.IMP]
+# Minimise the maximum difference between heights 1 [V.IMP]
 
 # Minimize the Heights I
 
