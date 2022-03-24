@@ -1,6 +1,6 @@
 # Minimise the maximum difference between heights 1 [V.IMP]
 
-# Minimize the Heights I
+# Minimize the Heights I and II
 
 Given an array arr[] denoting heights of N towers and a positive integer K, you have to modify the height of each tower either by increasing or decreasing them by K only once.
 Find out what could be the possible minimum difference of the height of shortest and longest towers after you have modified each tower.
@@ -61,6 +61,7 @@ public:
         for(int i=1;i<n;i++){
             maxi = max(a[i-1]+k,a[n-1]-k);
             mini = min(a[0]+k,a[i]-k);
+            if(mini<0) continue;
             diff = min(diff,maxi-mini);
         }
         
