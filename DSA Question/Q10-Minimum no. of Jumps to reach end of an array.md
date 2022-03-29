@@ -41,40 +41,40 @@ You don't need to read input or print anything. Your task is to complete functio
 ```C++
 // C++
   class Solution{
-  public:
-    int cnt = 0;
-    
-    void jump(int arr[], int n, int pos){
-        long int val = arr[pos];
-        
-        if(n==1) return;
-        else if(val == 0){
-            cnt = -1;
-            return;
-        }
-        else{
-            int t = pos+val;
-            if(t >= n-1){
-                cnt++;
-                return;
-            }
-            else{
-                int maxi = INT_MIN,temp;
-                for(auto i=pos+1;i<=t;i++){
-                    temp = maxi;
-                    maxi = max(maxi,arr[i]+i);
-                    if(temp!=maxi) pos=i;
-                }
-                cnt++;
-                jump(arr,n,pos);
-            }
-        }
-    }
-    
-    int minJumps(int arr[], int n){
-        // Your code here
-        jump(arr,n,0);
-        return cnt;
-    }
-};
+    public:
+      int cnt = 0;
+
+      void jump(int arr[], int n, int pos){
+          long int val = arr[pos];
+
+          if(n==1) return;
+          else if(val == 0){
+              cnt = -1;
+              return;
+          }
+          else{
+              int t = pos+val;
+              if(t >= n-1){
+                  cnt++;
+                  return;
+              }
+              else{
+                  int maxi = INT_MIN,temp;
+                  for(auto i=pos+1;i<=t;i++){
+                      temp = maxi;
+                      maxi = max(maxi,arr[i]+i);
+                      if(temp!=maxi) pos=i;
+                  }
+                  cnt++;
+                  jump(arr,n,pos);
+              }
+          }
+      }
+
+      int minJumps(int arr[], int n){
+          // Your code here
+          jump(arr,n,0);
+          return cnt;
+      }
+  };
 ```
