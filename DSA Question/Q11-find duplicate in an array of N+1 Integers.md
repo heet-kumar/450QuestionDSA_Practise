@@ -27,7 +27,7 @@ You must solve the problem without modifying the array nums and uses only consta
 ## Solution
 
 ```C++
-  // C++
+  // C++ but space complexity is O(N)
   class Solution {
     public:
         int findDuplicate(vector<int>& nums) {
