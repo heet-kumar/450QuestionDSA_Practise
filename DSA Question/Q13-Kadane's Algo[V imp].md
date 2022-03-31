@@ -61,3 +61,26 @@ You don't need to read input or print anything. The task is to complete the func
       }
   };
 ```
+
+```Java
+// Java
+class Solution{
+
+    // arr: input array
+    // n: size of array
+    //Function to find the sum of contiguous subarray with maximum sum.
+    long maxSubarraySum(int arr[], int n){
+        
+        // Your code here
+        int lsum=0,fsum=Integer.MIN_VALUE;
+        
+        for(int i=0;i<n;i++){
+            lsum = Math.max(lsum+arr[i],arr[i]);
+            fsum = Math.max(lsum,fsum);
+        }
+        
+        return fsum;
+    }
+    
+}
+```
