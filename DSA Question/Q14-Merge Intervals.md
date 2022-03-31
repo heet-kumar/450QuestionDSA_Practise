@@ -51,3 +51,38 @@ class Solution {
         }
 };
 ```
+``` C++
+// C++ efficient answer
+    class Solution {
+        public:
+            vector<vector<int>> merge(vector<vector<int>>& intervals) {
+                sort(intervals.begin(), intervals.end());
+
+                // for(auto i=0;i<intervals.size();i++){
+                //     cout<<intervals[i][0]<<" "<<intervals[i][1]<<endl;
+                // }
+
+                int st = intervals[0][0], end = intervals[0][1];
+
+                // cout<<"st end :"<<st<<" "<<end;
+
+                int n = intervals.size();
+
+                vector<vector<int>> ret;
+
+                for (int i = 1; i < n; ++i) {
+                    if (end >= intervals[i][0]) {
+                        end = max(end, intervals[i][1]);
+                    } else {
+                        ret.push_back({st, end});
+                        st = intervals[i][0];
+                        end = intervals[i][1];
+                    }
+                }
+
+                ret.push_back({st, end});
+
+                return ret;
+            }
+    };
+```
