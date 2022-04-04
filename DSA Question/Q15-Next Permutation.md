@@ -31,3 +31,15 @@ The replacement must be in place and use only constant extra memory.
 
 - 1 <= nums.length <= 100
 - 0 <= nums[i] <= 100
+
+
+## Solution
+
+```C++
+    class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        next_permutation(nums.begin(),nums.end());
+    }
+};
+```
