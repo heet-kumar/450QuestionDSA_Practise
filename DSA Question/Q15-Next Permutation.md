@@ -37,9 +37,9 @@ The replacement must be in place and use only constant extra memory.
 
 ```C++
     class Solution {
-public:
-    void nextPermutation(vector<int>& nums) {
-        next_permutation(nums.begin(),nums.end());
-    }
-};
+        public:
+            void nextPermutation(vector<int>& nums) {
+                next_permutation(nums.begin(),nums.end());
+            }
+    };
 ```
