@@ -36,10 +36,34 @@ The replacement must be in place and use only constant extra memory.
 ## Solution
 
 ```C++
+    // C++
     class Solution {
         public:
             void nextPermutation(vector<int>& nums) {
                 next_permutation(nums.begin(),nums.end());
+            }
+    };
+```
+
+```C++
+    // C++
+    class Solution {
+        public:
+            void nextPermutation(vector<int>& nums) {
+
+                int l,r;
+                int n = nums.size();
+                for(l=n-2;l>=0;l--){
+                    if(nums[l]<nums[l+1]) break;
+                }
+                if(l<0) reverse(nums.begin(),nums.end());
+                else{
+                    for(r=n-1;r>l;r--){
+                        if(nums[r]>nums[l]) break;
+                    }
+                    swap(nums[l],nums[r]);
+                    reverse(nums.begin()+l+1,nums.end());
+                }
             }
     };
 ```
