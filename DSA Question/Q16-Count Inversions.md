@@ -37,3 +37,7 @@ You don't need to read input or print anything. Your task is to complete the fun
 
 - Expected Time Complexity: O(NLogN).
 - Expected Auxiliary Space: O(N).
+
+**Constraints:**
+- 1 ≤ N ≤ 5*10^5
+- 1 ≤ arr[i] ≤ 10^18
