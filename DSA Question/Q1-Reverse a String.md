@@ -1,4 +1,4 @@
-# Reverse a String [link](https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string)
+# Reverse a String [link](https://practice.geeksforgeeks.org/problems/reverse-a-string/1)
 
 You are given a string s. You need to reverse the string.
 
