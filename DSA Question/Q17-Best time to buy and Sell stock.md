@@ -65,3 +65,19 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
           }
       };
 ```
+```Java
+    // JAVA
+    class Solution {
+        public int maxProfit(int[] prices) {
+            int mini = Integer.MAX_VALUE;
+            int p = 0;
+
+            for(int i=0;i<prices.length;i++){
+                mini = Math.min(mini,prices[i]);
+                p = Math.max(p,prices[i]-mini);
+            }
+
+            return p;
+        }
+    }
+```
