@@ -19,7 +19,7 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 - Output: 0
 - Explanation: In this case, no transactions are done and the max profit = 0.
 
-Constraints:
+**Constraints:**
 
 - 1 <= prices.length <= 10^5
 - 0 <= prices[i] <= 10^4
