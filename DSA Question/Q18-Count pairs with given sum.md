@@ -32,3 +32,34 @@ You don't need to read input or print anything. Your task is to complete the fun
 - 1 <= N <= 10^5
 - 1 <= K <= 10^8
 - 1 <= Arr[i] <= 10^6
+
+## Solution
+
+```C++
+  // C++ solution
+  // only 180 test case passed out off 253
+  
+  class Solution{   
+    public:
+        int cnt = 0;
+
+        void validpair(int a[],int n,int k,int pos){
+
+            if(pos==n) return;
+            else{
+                for(int i=pos+1;i<n;i++){
+                    if(a[pos]+a[i] == k) cnt++;
+                }
+
+                validpair(a,n,k,pos+1);
+            }
+        }
+
+        int getPairsCount(int arr[], int n, int k) {
+            // code here
+            validpair(arr,n,k,0);
+            return cnt;
+        }
+    };
+  
+```
