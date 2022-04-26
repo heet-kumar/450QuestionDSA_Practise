@@ -63,3 +63,22 @@ You don't need to read input or print anything. Your task is to complete the fun
     };
   
 ```
+
+```C++
+  // C++ Solution
+  class Solution{   
+    public:
+       int getPairsCount(int arr[], int n, int k) {
+           unordered_map<int,int> m;
+           int ans=0;
+           for(int i = 0 ; i < n ; i++){
+               int val = k - arr[i];
+               if(m[val]){
+                   ans += m[val];
+               }
+               m[arr[i]]++;
+           }
+           return ans;
+       }
+    };
+```
