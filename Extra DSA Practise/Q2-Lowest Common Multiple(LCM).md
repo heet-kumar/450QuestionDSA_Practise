@@ -14,7 +14,7 @@ For Example, for the array {1,2,3,4} set S = { lcm(1,2),lcm(2,3),lcm(3,4) } = {2
 ## Output format:
 - The output contains an integer denoting the largest element the set S as specified in the problem.
 
-## Code Constraints
+**Code Constraints :**
 - 4 <= array_length <=10^5
 - 1 <= arra[i] <= 1500
 
