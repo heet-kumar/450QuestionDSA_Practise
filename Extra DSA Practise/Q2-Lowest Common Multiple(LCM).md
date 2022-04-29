@@ -35,3 +35,34 @@ For Example, for the array {1,2,3,4} set S = { lcm(1,2),lcm(2,3),lcm(3,4) } = {2
 - Explaination: 
    - Set S = {lcm(7,3),lcm(3,2),lcm(2,9),lcm(9,12)} = {21,6,18,36}
    - Largest Element = 36
+
+## Solution :
+
+```C++
+  // C++ solution
+  #include<bits/stdc++.h>
+  using namespace std;
+  
+  int gcd(int a, int b){
+    if(b==0) return a;
+    return gcd(a,a%b);
+  }
+  
+  int lcm(int a,int b){
+    return gcd(a/gcd(a,b))*b;
+  }
+  
+  int main(){
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++) cin>>a[i];
+    int maxi = INT_MIN;
+    for(int i=0;i<n-1;i++){
+      maxi = max(maxi,lcm(a[i],a[i+1]));
+    }
+    cout<<maxi;
+    return 0;
+  }
+  
+```
