@@ -61,7 +61,6 @@ For Example, for the array {1,2,3,4} set S = { lcm(1,2),lcm(2,3),lcm(3,4) } = {2
     for(int i=0;i<n - 1;i++){
       maxi = max(maxi,lcm(a[i],a[i+1]));
     }
-    
     cout<<maxi;
     return 0;
   }
