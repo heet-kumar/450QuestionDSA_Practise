@@ -10,3 +10,5 @@
 - [x] 8. find Largest sum contiguous Subarray [V. IMP]
 - [x] 9. Minimise the maximum difference between heights [V.IMP]
 - [x] 10. Minimum no. of Jumps to reach end of an array
+- [x] 11. find duplicate in an array of N+1 Integers
+- [x] 12. Merge 2 sorted arrays without using Extra space.
