@@ -50,7 +50,6 @@ You don't need to read input or print anything. Your task is to complete the fun
                 for(int i=pos+1;i<n;i++){
                     if(a[pos]+a[i] == k) cnt++;
                 }
-
                 validpair(a,n,k,pos+1);
             }
         }
