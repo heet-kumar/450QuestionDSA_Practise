@@ -45,7 +45,7 @@ For Example, for the array {1,2,3,4} set S = { lcm(1,2),lcm(2,3),lcm(3,4) } = {2
   
   int gcd(int a, int b){
     if(b==0) return a;
-    return gcd(a,a % b);
+    return gcd(b,a % b);
   }
   
   int lcm(int a,int b){
