@@ -49,7 +49,7 @@ For Example, for the array {1,2,3,4} set S = { lcm(1,2),lcm(2,3),lcm(3,4) } = {2
   }
   
   int lcm(int a,int b){
-    return gcd(a / gcd(a,b)) * b;
+    return (a / gcd(a,b)) * b;
   }
   
   int main(){
