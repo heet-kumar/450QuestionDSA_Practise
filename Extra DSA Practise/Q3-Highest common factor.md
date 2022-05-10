@@ -23,3 +23,10 @@ Find the HCF(Highest Common Factor) of n number given in an integer array. Fill 
 ## Output format:
 - Return the HCF of the given number
 
+## Solution
+
+```C++
+  // C++ language used
+  
+  
+```
