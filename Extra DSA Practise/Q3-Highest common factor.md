@@ -16,3 +16,10 @@ Find the HCF(Highest Common Factor) of n number given in an integer array. Fill 
 - Output: 5
 - Expalination: The common factor for 10,15,20,35,70 are 1 and 5. Hence the HCF is 5.
 
+## Input format:
+- The size of array
+- elements of the array
+
+## Output format:
+- Return the HCF of the given number
+
