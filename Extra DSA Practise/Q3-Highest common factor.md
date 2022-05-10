@@ -26,7 +26,7 @@ Find the HCF(Highest Common Factor) of n number given in an integer array. Fill 
 ## Solution
 
 ```C++
-  // C++ language used
+  // Solution in C++
   #include<bits/stdc++.h>
   using namespace std;
   
