@@ -27,3 +27,27 @@ Find the LCM of the given two integers. Fill in the function that takes as input
 - 1 <= input1 <= 10^9
 - 1 <= input2 <= 10^9
 
+## Solution :
+
+```C++
+  // Code in C++ language
+  #include<bits/stdc++.h>
+  using namespace std;
+  
+  int gcd(int a,int b){
+    if(b==0)return a;
+    return gcd(b,a%b);
+  }
+  
+  int lcm(int a,int b){
+    return (a / gcd(a,b)) * b;
+  }
+  
+  int main(){
+    int a,b;
+    cin>>a>>b;
+    cout<<lcm(a,b);
+    return 0;
+  }
+  
+```
