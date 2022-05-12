@@ -16,3 +16,14 @@ Find the LCM of the given two integers. Fill in the function that takes as input
 - Output: 65
 - Explaination: The LCM of 5 and 65 is 65.
 
+## Input format:
+- First Integer
+- Second Integer
+
+## Output format:
+- Return the LCM of the two number
+
+**Code Constraints :**
+- 1<=input1<=10^9
+- 1<=input2<=10^9
+
