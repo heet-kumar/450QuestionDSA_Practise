@@ -24,6 +24,6 @@ Find the LCM of the given two integers. Fill in the function that takes as input
 - Return the LCM of the two number
 
 **Code Constraints :**
-- 1<=input1<=10^9
-- 1<=input2<=10^9
+- 1 <= input1 <= 10^9
+- 1 <= input2 <= 10^9
 
