@@ -57,3 +57,21 @@ public:
 };
 
 ```
+```C++
+// Solution in C++ time is reduced
+
+class Solution {
+    public:
+        string greatestLetter(string s) {
+            for(char ch='z';ch>='a';ch--){
+                char ch2=ch-32;
+                bool f1=false,f2=false;
+                for(char ch3:s){
+                    if(ch3==ch) f2=true;
+                    if(ch3==ch2) f1=true;
+                }
+                if(f1 && f2) return string(1,ch2);
+            }
+            return "";
+        }
+};
