@@ -30,3 +30,30 @@ There is no letter that appears in both lower and upper case.
 
 - 1 <= s.length <= 1000
 - s consists of lowercase and uppercase English letters.
+
+
+## Solution
+
+```C++
+// Solution in C++
+
+class Solution {
+public:
+    string greatestLetter(string s) {
+        int len = s.size();
+        unordered_map<char,int> m;
+        for(int i=0;i<len;i++){
+            m[s[i]]++;
+        }
+        string ans ="";
+        sort(s.begin(),s.end());
+        for(int i=0;i<len;i++){
+            char l = tolower(s[i]);
+            char u = toupper(s[i]);
+            if(m[l]&&m[u]) ans=u;
+        }
+        return ans; 
+    }
+};
+
+```
