@@ -25,3 +25,24 @@ Return the running sum of nums.
 
 - 1 <= nums.length <= 1000
 - -10^6 <= nums[i] <= 10^6
+
+# Solution
+
+```C++
+// Solution in C++ with recurssion
+  class Solution {
+  public:
+      vector<int> running(vector<int> v,int pos,int len,vector<int> &a,int sum){
+          if(pos==len) return a;
+          sum+=v[pos];
+          a.push_back(sum);
+          return running(v,pos+1,len,a,sum);
+      }
+      vector<int> runningSum(vector<int>& v) {
+          int n = v.size();
+          vector<int> a;
+          running(v,0,n,a,0);
+          return a;
+      }
+  }
+```
