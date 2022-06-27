@@ -29,7 +29,7 @@ Return the running sum of nums.
 # Solution
 
 ```C++
-// Solution in C++ with recurssion
+// Solution in C++ with recursion
   class Solution {
   public:
       vector<int> running(vector<int> v,int pos,int len,vector<int> &a,int sum){
@@ -45,4 +45,21 @@ Return the running sum of nums.
           return a;
       }
   }
+```
+
+```C++
+// solution in C++ without recursion
+  class Solution{
+    public:
+        vector<int> runningSum(vector<int> &v){
+          int n = v.size();
+          vector<int> a;
+          a.push_back(v[0]);
+          for(int i=1;i<n;i++){
+              a.push_back(a[i-1]+v[i]);
+          }
+          return a;
+        }
+  }
+
 ```
