@@ -102,7 +102,7 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
 
         inorder(head,vr);
 
-        cout<<"Answer real : "<<endl;
+        cout<<"Answer real : "<<endl;              // display real image of the tree in inorder traversal
 
         for(auto &i:vr){
             cout<<i<<" ";
@@ -114,7 +114,7 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
 
         inorder(head,vi);
 
-        cout<<endl<<"Answer mirror : "<<endl;
+        cout<<endl<<"Answer mirror : "<<endl;      // display mirror image of the tree in inorder traversal
 
         for(auto &i:vi){
             cout<<i<<" ";
