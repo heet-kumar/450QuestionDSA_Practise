@@ -47,13 +47,13 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
       #include <vector>
       using namespace std;
 
-      class Node{
+      class Node{                      // creating tree with class Node
           public:
           int data;
           Node* left;
           Node* right;
 
-          Node(int val){
+          Node(int val){               // creating new node in tree 
               data = val;
               left = NULL;
               right = NULL;
@@ -61,19 +61,19 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
       };
 
 
-      void inorder(Node* node,vector<int> &v){
+      void inorder(Node* node,vector<int> &v){        // inorder traversal of the tree 
           if(node==NULL){
-              return;
+              return;                                 // left root right
           }
           inorder(node->left,v);
           v.push_back(node->data);
           inorder(node->right,v);
       }
 
-      Node* mirrortree(Node* root){
+      Node* mirrortree(Node* root){             // creating mirror of the tree
           if(root==NULL) return root;
 
-          Node* t = root->left;
+          Node* t = root->left;                 // changing the node right to left and left to right
           root->left = root->right;
           root->right = t;
 
@@ -86,11 +86,11 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
       }
 
       int main() {
-        Node *root = new Node(5);
+        Node *root = new Node(5);            // creating root of the tree
         Node *head = root;
 
-        root->left = new Node(3);
-        root->right = new Node(6);
+        root->left = new Node(3);               // inseting node
+        root->right = new Node(6);        
 
         root->left->left = new Node(2);
         root->left->right = new Node(4);
@@ -98,7 +98,7 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
       // 	root->right->left = new Node(6);
       // 	root->right->right = new Node(7);
 
-        vector<int> vr;
+        vector<int> vr;                   // to store the root data of the tree nodes in inorder manner
 
         inorder(head,vr);
 
@@ -108,9 +108,9 @@ Given a binary tree, the task is to create a new binary tree which is a mirror i
             cout<<i<<" ";
         }
 
-        vector<int> vi;
+        vector<int> vi;                   // to store the root data of the tree nodes in inorder manner
 
-        head = mirrortree(head);
+        head = mirrortree(head);          // creating mirror of the given tree 
 
         inorder(head,vi);
 
